@@ -168,14 +168,18 @@ ul {
   transition: color 0.2s;
 }
 
+.top-nav .nav-links a {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
 .top-nav .nav-links a:hover,
 .top-nav .nav-links a.active {
   color: var(--primary);
 }
 
 .top-nav .nav-links a.active {
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 4px;
+  border-bottom-color: var(--primary);
 }
 
 .btn-primary {
@@ -572,8 +576,7 @@ ul {
   font-size: 14px;
   font-weight: 600;
   border: none;
-  cursor: pointer;
-  transition: background 0.2s, opacity 0.2s;
+  text-align: center;
 }
 
 .btn-plan-secondary {
@@ -588,10 +591,13 @@ ul {
 .btn-plan-primary {
   background: var(--primary);
   color: white;
+  border-radius: 9999px;
+  padding: 12px 32px;
+  width: auto;
 }
 
 .btn-plan-primary:hover {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* Privacy */

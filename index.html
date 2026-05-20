@@ -77,23 +77,15 @@
             </div>
             <h3 class="headline-md">Receipt Scanner</h3>
             <p class="body-md">Never lose a deductible meal or expense again. Snap a photo, and we'll extract the data.</p>
-            <img src="images/receipt-scanner.png" alt="Receipt scanner interface" class="feature-image">
           </div>
 
           <!-- Tax-Ready Reports -->
           <div class="bento-card span-8 light-green">
-            <div class="bento-split">
-              <div>
-                <div class="bento-icon plain-white">
-                  <span class="material-symbols-outlined">description</span>
-                </div>
-                <h3 class="headline-md">Tax-Ready Reports</h3>
-                <p class="body-md">Export IRS-compliant mileage logs in PDF or CSV. Perfect for tax season or reimbursement requests.</p>
-              </div>
-              <div>
-                <img src="images/tax-reports.png" alt="IRS-compliant mileage report preview">
-              </div>
+            <div class="bento-icon plain-white">
+              <span class="material-symbols-outlined">description</span>
             </div>
+            <h3 class="headline-md">Tax-Ready Reports</h3>
+            <p class="body-md">Export IRS-compliant mileage logs in PDF or CSV. Perfect for tax season or reimbursement requests.</p>
           </div>
         </div>
       </div>
@@ -112,34 +104,36 @@
             <div class="plan-label">MONTHLY</div>
             <div class="price">$0.99<span>/mo</span></div>
             <ul>
-              <li><span class="material-symbols-outlined">check_circle</span> Unlimited Auto-Tracking</li>
-              <li><span class="material-symbols-outlined">check_circle</span> Basic Exports</li>
+              <li><span class="material-symbols-outlined">check_circle</span> Auto-Tracking</li>
+
+              <li><span class="material-symbols-outlined">check_circle</span> All Future Updates</li>
             </ul>
-            <button class="btn-plan btn-plan-secondary">Choose Plan</button>
+
           </div>
 
           <!-- Annual -->
-          <div class="pricing-card featured">
-            <div class="pricing-badge">BEST VALUE</div>
+          <div class="pricing-card">
             <div class="plan-label">ANNUAL</div>
             <div class="price">$4.99<span>/yr</span></div>
             <ul>
-              <li><span class="material-symbols-outlined">check_circle</span> Unlimited Auto-Tracking</li>
-              <li><span class="material-symbols-outlined">check_circle</span> Advanced Reports (PDF/CSV)</li>
-              <li><span class="material-symbols-outlined">check_circle</span> Priority Support</li>
+              <li><span class="material-symbols-outlined">check_circle</span> Auto-Tracking</li>
+
+              <li><span class="material-symbols-outlined">check_circle</span> All Future Updates</li>
             </ul>
-            <button class="btn-plan btn-plan-primary">Start Saving Now</button>
+
           </div>
 
-          <!-- Lifetime -->
-          <div class="pricing-card">
+          <!-- Lifetime (Featured) -->
+          <div class="pricing-card featured">
+
             <div class="plan-label">LIFETIME</div>
-            <div class="price">$9.99<span> total</span></div>
+            <div class="price">$9.99<span> one-time</span></div>
             <ul>
-              <li><span class="material-symbols-outlined">check_circle</span> One-time payment</li>
-              <li><span class="material-symbols-outlined">check_circle</span> All future updates</li>
+              <li><span class="material-symbols-outlined">check_circle</span> Auto-Tracking</li>
+
+              <li><span class="material-symbols-outlined">check_circle</span> All Future Updates</li>
             </ul>
-            <button class="btn-plan btn-plan-secondary">Buy Once</button>
+            <div class="btn-plan btn-plan-primary">Buy Once, Own Forever</div>
           </div>
         </div>
       </div>
@@ -166,7 +160,7 @@
           <div class="badge-icon">
             <span class="material-symbols-outlined">verified_user</span>
           </div>
-          <p>Your financial data is private and secure by design.</p>
+          <p>Your data is private and secure by design.</p>
         </div>
       </div>
     </section>
@@ -229,5 +223,19 @@
       <div class="copyright">© 2026 Mark My Miles. All rights reserved.</div>
     </div>
   </footer>
+  <script>
+    function updateActiveNav() {
+      var hash = location.hash;
+      var links = document.querySelectorAll('.top-nav .nav-links a');
+      links.forEach(function(link) {
+        link.classList.remove('active');
+        if (hash && link.getAttribute('href') === hash) {
+          link.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('hashchange', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+  </script>
 </body>
 </html>
